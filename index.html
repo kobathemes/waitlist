@@ -188,6 +188,59 @@
     transform:translateY(18%);user-select:none;
   }
 
+  /* ---------- ANIMATIONS ---------- */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  .hero .badge,.hero h1,.hero .sub,.hero .hero-note,.hero-grid>div:last-child{
+    animation:fadeUp .7s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .hero h1{animation-delay:.1s}
+  .hero .sub{animation-delay:.2s}
+  .hero .hero-note{animation-delay:.3s}
+  .hero-grid>div:last-child{animation-delay:.25s}
+
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+  .badge .dot{animation:pulse 1.6s ease-in-out infinite}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.1s}
+  .reveal.d2{transition-delay:.2s}
+  .reveal.d3{transition-delay:.3s}
+
+  /* highlight sweeps in when its section scrolls into view */
+  .sweep{
+    background:linear-gradient(var(--pink),var(--pink)) left center/0% 100% no-repeat;
+    padding:0 .12em;transition:background-size .9s cubic-bezier(.2,.7,.2,1) .35s;
+  }
+  .in-view .sweep{background-size:100% 100%}
+  .interlude .sweep{color:#fff;transition:background-size .9s cubic-bezier(.2,.7,.2,1) .35s,color .3s .7s}
+  .interlude.in-view .sweep{color:var(--ink)}
+
+  /* ---------- TRANSFORMATION ---------- */
+  .shift-section{background:var(--white)}
+  .shift{margin-top:56px;border:var(--border)}
+  .shift-row{display:grid;grid-template-columns:1fr 64px 1fr;align-items:stretch;border-bottom:var(--border)}
+  .shift-row:last-child{border-bottom:none}
+  .shift-cell{padding:28px 30px;display:flex;align-items:center}
+  .shift-cell.before{color:#666;background:var(--white);font-size:.97rem}
+  .shift-cell.after{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+  .shift-row:nth-child(1) .after{background:var(--pink)}
+  .shift-row:nth-child(2) .after{background:var(--yellow)}
+  .shift-row:nth-child(3) .after{background:var(--lime)}
+  .shift-arrow{
+    display:flex;align-items:center;justify-content:center;
+    border-left:var(--border);border-right:var(--border);
+    font-size:1.2rem;font-weight:700;background:var(--bg);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero .badge,.hero h1,.hero .sub,.hero .hero-note,.hero-grid>div:last-child{animation:none}
+    .reveal{opacity:1;transform:none;transition:none}
+    .sweep{background-size:100% 100%;transition:none}
+    .badge .dot{animation:none}
+    .marquee-track{animation-duration:60s}
+  }
+
   @media(max-width:860px){
     .hero-grid{grid-template-columns:1fr;gap:44px}
     header{padding:64px 0 56px}
@@ -195,6 +248,8 @@
     .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.2)}
     .stat:last-child{border-bottom:none}
     .tease-grid{grid-template-columns:1fr}
+    .shift-row{grid-template-columns:1fr}
+    .shift-arrow{border:none;border-top:var(--border);border-bottom:var(--border);padding:6px;transform:rotate(90deg)}
     section{padding:72px 0}
     .interlude{padding:90px 24px}
   }
@@ -217,8 +272,8 @@
       <div class="hero-grid">
         <div>
           <div class="badge"><span class="dot"></span> Waitlist open now</div>
-          <h1>Learn how to make money <span class="hl-pink">with AI.</span></h1>
-          <p class="sub">A 3-week sprint that shows you exactly how — step by step, even if you have never done anything like this before. Doors open soon, and the waitlist hears everything first.</p>
+          <h1>Three weeks from now, you could be making money <span class="hl-pink">with AI.</span></h1>
+          <p class="sub">A 3-week sprint that shows you exactly how — step by step, even if you have never done anything like this before. You come in curious. You leave changed. Doors open soon, and the waitlist hears everything first.</p>
           <div class="hero-note">Be first in the door — join the waitlist ↓</div>
         </div>
         <div id="waitlist">
@@ -269,8 +324,34 @@
   </div>
 </section>
 
+<section class="shift-section band">
+  <div class="wrap">
+    <div class="kicker">The shift</div>
+    <h2>Three weeks is all it takes to become a different kind of person online.</h2>
+    <p class="lead">Not a different life overnight. A different trajectory — because you finally know how the money part works.</p>
+
+    <div class="shift">
+      <div class="shift-row reveal">
+        <div class="shift-cell before">Watching everyone else make money with AI</div>
+        <div class="shift-arrow">→</div>
+        <div class="shift-cell after">Being one of the people who does</div>
+      </div>
+      <div class="shift-row reveal d1">
+        <div class="shift-cell before">"I wouldn't even know where to start"</div>
+        <div class="shift-arrow">→</div>
+        <div class="shift-cell after">A clear path, one step at a time</div>
+      </div>
+      <div class="shift-row reveal d2">
+        <div class="shift-cell before">"Someday I'll figure this out"</div>
+        <div class="shift-arrow">→</div>
+        <div class="shift-cell after">Someday has a date now</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="interlude band">
-  <h2>Three weeks from now, this could be <span class="hl-pink">the thing that changed everything.</span></h2>
+  <h2>Three weeks from now, this could be <span class="sweep">the thing that changed everything.</span></h2>
   <p>You don't need experience. You don't need an audience. You just need to be on the list when doors open.</p>
   <a class="btn-pink" href="#waitlist">Save my spot ↑</a>
 </div>
@@ -315,5 +396,27 @@
   });
 </script>
 
+<script>
+  // Scroll-reveal animations
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var autoTargets = document.querySelectorAll('section .kicker, section h2, section .lead, .interlude h2, .interlude p, .btn-pink');
+    autoTargets.forEach(function(el){ el.classList.add('reveal'); });
+    document.querySelectorAll('.tease').forEach(function(el,i){ el.classList.add('reveal','d'+Math.min(i,3)); });
+    document.querySelectorAll('.stat').forEach(function(el,i){ el.classList.add('reveal','d'+Math.min(i,3)); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in-view'); io2.unobserve(e.target); }
+      });
+    },{threshold:.4});
+    document.querySelectorAll('.interlude').forEach(function(el){ io2.observe(el); });
+  })();
+</script>
 </body>
 </html>
