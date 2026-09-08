@@ -22,133 +22,58 @@
   *{box-sizing:border-box;}
   html{color-scheme:light;}
   body{
-    margin:0;
-    background:var(--cream);
-    color:var(--ink);
-    font-family:var(--body);
-    line-height:1.5;
+    margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);line-height:1.5;
     -webkit-font-smoothing:antialiased;
     background-image:radial-gradient(var(--ink) 0.7px, transparent 0.7px);
-    background-size:22px 22px;
-    background-position:-11px -11px;
+    background-size:22px 22px;background-position:-11px -11px;
   }
   .wrap{max-width:920px;margin:0 auto;padding:28px 20px 64px;}
-
   .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--ink);color:var(--cream);
+    display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--cream);
     font-family:var(--head);font-weight:700;font-size:12.5px;letter-spacing:1.5px;
-    padding:8px 14px;border:2.5px solid var(--ink);
-    box-shadow:5px 5px 0 var(--lime);
-    text-transform:uppercase;
+    padding:8px 14px;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--lime);text-transform:uppercase;
   }
-  h1{
-    font-family:var(--head);font-weight:800;
-    font-size:clamp(34px,6vw,58px);line-height:0.98;
-    text-wrap:balance;margin:20px 0 10px;letter-spacing:-1px;
-  }
+  h1{font-family:var(--head);font-weight:800;font-size:clamp(34px,6vw,58px);line-height:0.98;text-wrap:balance;margin:20px 0 10px;letter-spacing:-1px;}
   h1 .hl{background:var(--lime);padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
   .lede{font-size:clamp(16px,2.2vw,19px);max-width:60ch;color:var(--ink);font-weight:500;margin:0 0 22px;}
-
-  .host{
-    display:flex;align-items:center;gap:14px;
-    background:var(--paper);border:2.5px solid var(--ink);
-    box-shadow:5px 5px 0 var(--ink);
-    padding:12px 15px;margin:0 0 22px;max-width:640px;
-  }
-  .host-badge{
-    flex:0 0 auto;width:48px;height:48px;border-radius:50%;
-    background:var(--lime);border:2.5px solid var(--ink);
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--head);font-weight:800;font-size:18px;color:var(--ink);
-  }
+  .host{display:flex;align-items:center;gap:14px;background:var(--paper);border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:12px 15px;margin:0 0 22px;max-width:640px;}
+  .host-badge{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--lime);border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:800;font-size:18px;color:var(--ink);}
   .host-txt{display:flex;flex-direction:column;gap:2px;}
   .host-txt b{font-family:var(--head);font-size:15px;}
   .host-txt span{font-size:12.5px;color:var(--muted);font-weight:500;line-height:1.35;}
-
-  .livebar{
-    display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 16px;
-  }
-  .pill{
-    display:inline-flex;align-items:center;gap:8px;
-    border:2.5px solid var(--ink);background:var(--paper);
-    padding:7px 13px;font-weight:700;font-size:13.5px;
-    box-shadow:3px 3px 0 var(--ink);
-  }
+  .livebar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 16px;}
+  .pill{display:inline-flex;align-items:center;gap:8px;border:2.5px solid var(--ink);background:var(--paper);padding:7px 13px;font-weight:700;font-size:13.5px;box-shadow:3px 3px 0 var(--ink);}
   .pill.urgent{background:var(--ink);color:var(--lime);border-color:var(--ink);}
   .pill.count{background:var(--red);color:#fff;border-color:var(--ink);}
   .pill .num{font-variant-numeric:tabular-nums;font-weight:800;letter-spacing:.5px;}
-
-  .window{
-    border:4px solid var(--ink);
-    box-shadow:14px 14px 0 var(--ink);
-    background:#0d0d0d;
-    border-radius:4px;overflow:hidden;
-  }
-  .titlebar{
-    display:flex;align-items:center;gap:10px;
-    background:var(--ink);padding:11px 14px;border-bottom:4px solid var(--ink);
-  }
+  .window{border:4px solid var(--ink);box-shadow:14px 14px 0 var(--ink);background:#0d0d0d;border-radius:4px;overflow:hidden;}
+  .titlebar{display:flex;align-items:center;gap:10px;background:var(--ink);padding:11px 14px;border-bottom:4px solid var(--ink);}
   .lights{display:flex;gap:7px;}
   .lights i{width:13px;height:13px;border-radius:50%;display:block;border:1.5px solid rgba(0,0,0,.35);}
   .lights i:nth-child(1){background:#ff5f57;}
   .lights i:nth-child(2){background:#febc2e;}
   .lights i:nth-child(3){background:var(--lime);}
-  .fname{
-    color:#e7e7e7;font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.4px;
-    margin-left:4px;opacity:.9;
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  }
+  .fname{color:#e7e7e7;font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.4px;margin-left:4px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .screen{position:relative;aspect-ratio:16/9;background:#000;}
   .screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;}
-
-  .placeholder{
-    position:absolute;inset:0;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;text-align:center;gap:14px;
-    color:#efefef;padding:24px;
-    background:radial-gradient(120% 90% at 50% 0%, #1c1c1c 0%, #0a0a0a 70%);
-  }
-  .playbtn{
-    width:82px;height:82px;border-radius:50%;
-    background:var(--lime);border:3px solid #000;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:6px 6px 0 rgba(0,0,0,.55);
-  }
+  .placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;color:#efefef;padding:24px;background:radial-gradient(120% 90% at 50% 0%, #1c1c1c 0%, #0a0a0a 70%);}
+  .playbtn{width:82px;height:82px;border-radius:50%;background:var(--lime);border:3px solid #000;display:flex;align-items:center;justify-content:center;box-shadow:6px 6px 0 rgba(0,0,0,.55);}
   .playbtn::after{content:"";border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #111;margin-left:6px;}
   .placeholder b{font-family:var(--head);font-size:19px;color:#fff;}
   .placeholder span{font-size:13.5px;color:#b9b9b9;max-width:38ch;}
-
-  .undercap{
-    display:flex;align-items:center;gap:8px;justify-content:center;
-    margin:14px 0 0;font-size:14px;color:var(--muted);font-weight:500;text-align:center;
-  }
-
-  .offer{
-    margin:30px 0 0;background:var(--ink);color:var(--cream);
-    border:4px solid var(--ink);box-shadow:12px 12px 0 var(--lime);
-    padding:26px 24px;text-align:center;
-  }
+  .undercap{display:flex;align-items:center;gap:8px;justify-content:center;margin:14px 0 0;font-size:14px;color:var(--muted);font-weight:500;text-align:center;}
+  .offer{margin:30px 0 0;background:var(--ink);color:var(--cream);border:4px solid var(--ink);box-shadow:12px 12px 0 var(--lime);padding:26px 24px;text-align:center;}
   .offer .kick{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;color:var(--lime);}
   .offer h2{font-family:var(--head);font-weight:800;font-size:clamp(22px,3.6vw,30px);margin:8px 0 18px;line-height:1.05;text-wrap:balance;}
-  .cta{
-    display:inline-block;background:var(--lime);color:#111;text-decoration:none;
-    font-family:var(--head);font-weight:800;font-size:clamp(18px,2.6vw,22px);
-    padding:18px 34px;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);
-    transition:transform .08s ease, box-shadow .08s ease;
-  }
+  .cta{display:inline-block;background:var(--lime);color:#111;text-decoration:none;font-family:var(--head);font-weight:800;font-size:clamp(18px,2.6vw,22px);padding:18px 34px;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);transition:transform .08s ease, box-shadow .08s ease;}
   .cta:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 rgba(0,0,0,.55);}
   .cta:focus-visible{outline:4px solid var(--lime-deep);outline-offset:4px;}
   .subline{margin:16px 0 0;font-size:14.5px;color:#d9d2c4;font-weight:500;}
   .subline .code{background:var(--lime);color:#111;font-weight:700;padding:1px 7px;border-radius:3px;}
   .closes{margin:10px 0 0;font-size:13px;color:#c9b6b0;font-weight:700;letter-spacing:.3px;}
-
   footer{margin:40px 0 0;text-align:center;font-size:13px;color:var(--muted);}
   footer a{color:var(--ink);font-weight:700;}
-
-  @media (max-width:560px){
-    .window{box-shadow:8px 8px 0 var(--ink);}
-    .offer{box-shadow:8px 8px 0 var(--lime);}
-  }
+  @media (max-width:560px){ .window{box-shadow:8px 8px 0 var(--ink);} .offer{box-shadow:8px 8px 0 var(--lime);} }
   @media (prefers-reduced-motion:reduce){ .cta{transition:none;} }
   img{max-width:100%;}
   [hidden]{display:none!important;}
@@ -191,6 +116,7 @@
 
   <p class="undercap">▶ Press play now &amp; watch it through — this replay comes down soon and won’t be back.</p>
   <p class="undercap" style="margin-top:4px;font-size:13px;">🤫 This link is just for you — please don’t share it around.</p>
+  <p class="undercap" style="margin-top:6px;"><a id="ytfallback" href="https://youtu.be/rgAnK7Fp9WY" target="_blank" rel="noopener" style="color:var(--ink);font-weight:700;">▶ Video not showing? Tap here to watch ↗</a></p>
 
   <div class="offer">
     <div class="kick">Ready to actually do this?</div>
@@ -207,3 +133,54 @@
   // ==== EDIT ME: paste your YouTube video ID or full link between the quotes ====
   var YT_VIDEO = "https://youtu.be/rgAnK7Fp9WY";
   // ============================================================================
+
+  function ytId(v){
+    if(!v) return "";
+    v = v.trim();
+    var m = v.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{6,})/);
+    if(m) return m[1];
+    if(/^[A-Za-z0-9_-]{6,}$/.test(v)) return v;
+    return "";
+  }
+  (function(){
+    var id = ytId(YT_VIDEO);
+    var fb = document.getElementById('ytfallback');
+    if(fb && id){ fb.href = "https://youtu.be/" + id; }
+    if(id){
+      var screen = document.getElementById('screen');
+      var url = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&modestbranding=1&playsinline=1";
+      screen.innerHTML = '<iframe src="' + url + '" title="AI Income Opportunities — private replay" '
+        + 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" '
+        + 'allowfullscreen></iframe>';
+    }
+  })();
+
+  // ---- urgency countdown: a real 24h window per viewer, persists across refresh ----
+  (function(){
+    var el = document.getElementById('countdown');
+    if(!el) return;
+    var KEY = 'aio_deadline', WINDOW = 24*60*60*1000;   // 24 hours — change if you want
+    var deadline;
+    try{
+      deadline = parseInt(localStorage.getItem(KEY), 10);
+      if(!deadline || isNaN(deadline)){ deadline = Date.now() + WINDOW; localStorage.setItem(KEY, deadline); }
+    }catch(e){ deadline = Date.now() + WINDOW; }
+    function pad(n){ return (n<10?'0':'') + n; }
+    var t = setInterval(tick, 1000);
+    function tick(){
+      var diff = deadline - Date.now();
+      if(diff <= 0){
+        clearInterval(t);
+        var pill = el.closest ? el.closest('.pill') : el.parentNode;
+        if(pill){ pill.textContent = '⚠ Access is closing — watch now'; }
+        return;
+      }
+      var h = Math.floor(diff/3600000), m = Math.floor(diff%3600000/60000), s = Math.floor(diff%60000/1000);
+      el.textContent = pad(h)+':'+pad(m)+':'+pad(s);
+    }
+    tick();
+  })();
+</script>
+
+</body>
+</html>
