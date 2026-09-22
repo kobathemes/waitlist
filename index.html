@@ -28,43 +28,49 @@
     background-size:22px 22px;background-position:-11px -11px;
   }
   .wrap{max-width:920px;margin:0 auto;padding:28px 20px 64px;}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-family:var(--head);font-weight:700;font-size:12.5px;letter-spacing:1.5px;padding:8px 14px;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);text-transform:uppercase;}
-  h1{font-family:var(--head);font-weight:800;font-size:clamp(32px,5.6vw,54px);line-height:1.0;text-wrap:balance;margin:20px 0 12px;letter-spacing:-1px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--cream);
+    font-family:var(--head);font-weight:700;font-size:12.5px;letter-spacing:1.5px;
+    padding:8px 14px;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--lime);text-transform:uppercase;
+  }
+  h1{font-family:var(--head);font-weight:800;font-size:clamp(34px,6vw,58px);line-height:0.98;text-wrap:balance;margin:20px 0 10px;letter-spacing:-1px;}
   h1 .hl{background:var(--lime);padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
-  .lede{font-size:clamp(16px,2.2vw,19px);max-width:62ch;color:var(--ink);font-weight:500;margin:0 0 22px;}
-  .lede strong{font-weight:700;}
-  .host{display:flex;align-items:center;gap:14px;background:var(--paper);border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:12px 15px;margin:0 0 26px;max-width:620px;}
-  .host-badge{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--lime);border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:800;font-size:17px;}
-  .host-txt b{font-family:var(--head);font-size:15px;display:block;}
+  .lede{font-size:clamp(16px,2.2vw,19px);max-width:60ch;color:var(--ink);font-weight:500;margin:0 0 22px;}
+  .host{display:flex;align-items:center;gap:14px;background:var(--paper);border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:12px 15px;margin:0 0 22px;max-width:640px;}
+  .host-badge{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--lime);border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:800;font-size:18px;color:var(--ink);}
+  .host-txt{display:flex;flex-direction:column;gap:2px;}
+  .host-txt b{font-family:var(--head);font-size:15px;}
   .host-txt span{font-size:12.5px;color:var(--muted);font-weight:500;line-height:1.35;}
-  .window{border:4px solid var(--ink);box-shadow:12px 12px 0 var(--ink);background:#0d0d0d;border-radius:4px;overflow:hidden;margin:0 0 34px;}
+  .livebar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 16px;}
+  .pill{display:inline-flex;align-items:center;gap:8px;border:2.5px solid var(--ink);background:var(--paper);padding:7px 13px;font-weight:700;font-size:13.5px;box-shadow:3px 3px 0 var(--ink);}
+  .pill.urgent{background:var(--ink);color:var(--lime);border-color:var(--ink);}
+  .pill.count{background:var(--red);color:#fff;border-color:var(--ink);}
+  .pill .num{font-variant-numeric:tabular-nums;font-weight:800;letter-spacing:.5px;}
+  .window{border:4px solid var(--ink);box-shadow:14px 14px 0 var(--ink);background:#0d0d0d;border-radius:4px;overflow:hidden;}
   .titlebar{display:flex;align-items:center;gap:10px;background:var(--ink);padding:11px 14px;border-bottom:4px solid var(--ink);}
   .lights{display:flex;gap:7px;}
-  .lights i{width:13px;height:13px;border-radius:50%;display:block;}
+  .lights i{width:13px;height:13px;border-radius:50%;display:block;border:1.5px solid rgba(0,0,0,.35);}
   .lights i:nth-child(1){background:#ff5f57;}
   .lights i:nth-child(2){background:#febc2e;}
   .lights i:nth-child(3){background:var(--lime);}
-  .fname{color:#e7e7e7;font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.4px;margin-left:4px;opacity:.85;}
-  .closed{aspect-ratio:16/6.2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:30px 24px;color:#efefef;background:radial-gradient(120% 100% at 50% 0%, #1c1c1c 0%, #0a0a0a 72%);}
-  .lock{width:60px;height:60px;border-radius:50%;background:#1e1e1e;border:3px solid #444;display:flex;align-items:center;justify-content:center;font-size:26px;}
-  .closed b{font-family:var(--head);font-size:clamp(20px,3vw,26px);color:#fff;letter-spacing:.5px;}
-  .closed span{font-size:14px;color:#b3b3b3;max-width:46ch;}
-  .whyhead{font-family:var(--head);font-weight:800;font-size:clamp(24px,3.4vw,32px);margin:0 0 18px;text-wrap:balance;}
-  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 34px;}
-  .card{background:var(--paper);border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:18px 16px;display:flex;flex-direction:column;gap:8px;}
-  .card .n{width:40px;height:40px;border:2.5px solid var(--ink);background:var(--lime);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:800;font-size:20px;}
-  .card h3{font-family:var(--head);font-weight:800;font-size:17px;margin:2px 0 0;line-height:1.1;}
-  .card p{font-size:14px;color:#3a3a3a;margin:0;}
-  @media (max-width:680px){ .why{grid-template-columns:1fr;} }
-  .offer{background:var(--ink);color:var(--cream);border:4px solid var(--ink);box-shadow:12px 12px 0 var(--lime);padding:30px 26px;text-align:center;}
+  .fname{color:#e7e7e7;font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.4px;margin-left:4px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .screen{position:relative;aspect-ratio:16/9;background:#000;}
+  .screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;}
+  .placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;color:#efefef;padding:24px;background:radial-gradient(120% 90% at 50% 0%, #1c1c1c 0%, #0a0a0a 70%);}
+  .playbtn{width:82px;height:82px;border-radius:50%;background:var(--lime);border:3px solid #000;display:flex;align-items:center;justify-content:center;box-shadow:6px 6px 0 rgba(0,0,0,.55);}
+  .playbtn::after{content:"";border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #111;margin-left:6px;}
+  .placeholder b{font-family:var(--head);font-size:19px;color:#fff;}
+  .placeholder span{font-size:13.5px;color:#b9b9b9;max-width:38ch;}
+  .undercap{display:flex;align-items:center;gap:8px;justify-content:center;margin:14px 0 0;font-size:14px;color:var(--muted);font-weight:500;text-align:center;}
+  .offer{margin:30px 0 0;background:var(--ink);color:var(--cream);border:4px solid var(--ink);box-shadow:12px 12px 0 var(--lime);padding:26px 24px;text-align:center;}
   .offer .kick{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;color:var(--lime);}
-  .offer h2{font-family:var(--head);font-weight:800;font-size:clamp(24px,4vw,34px);margin:8px 0 10px;line-height:1.04;text-wrap:balance;}
-  .offer p.desc{font-size:16px;color:#e7e0d2;max-width:56ch;margin:0 auto 22px;}
-  .cta{display:inline-block;background:var(--lime);color:#111;text-decoration:none;font-family:var(--head);font-weight:800;font-size:clamp(18px,2.6vw,23px);padding:18px 36px;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);transition:transform .08s ease, box-shadow .08s ease;}
+  .offer h2{font-family:var(--head);font-weight:800;font-size:clamp(22px,3.6vw,30px);margin:8px 0 18px;line-height:1.05;text-wrap:balance;}
+  .cta{display:inline-block;background:var(--lime);color:#111;text-decoration:none;font-family:var(--head);font-weight:800;font-size:clamp(18px,2.6vw,22px);padding:18px 34px;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);transition:transform .08s ease, box-shadow .08s ease;}
   .cta:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 rgba(0,0,0,.55);}
   .cta:focus-visible{outline:4px solid var(--lime-deep);outline-offset:4px;}
-  .pay{margin:18px auto 0;font-size:14.5px;color:#d9d2c4;font-weight:500;max-width:52ch;}
-  .pay b{color:#fff;font-weight:700;}
+  .subline{margin:16px 0 0;font-size:14.5px;color:#d9d2c4;font-weight:500;}
+  .subline .code{background:var(--lime);color:#111;font-weight:700;padding:1px 7px;border-radius:3px;}
+  .closes{margin:10px 0 0;font-size:13px;color:#c9b6b0;font-weight:700;letter-spacing:.3px;}
   footer{margin:40px 0 0;text-align:center;font-size:13px;color:var(--muted);}
   footer a{color:var(--ink);font-weight:700;}
   @media (max-width:560px){ .window{box-shadow:8px 8px 0 var(--ink);} .offer{box-shadow:8px 8px 0 var(--lime);} }
@@ -75,61 +81,104 @@
 <body>
 
 <div class="wrap">
-  <span class="eyebrow">⛔ Free masterclass · now closed</span>
+  <span class="eyebrow">🔒 Private access · registered guests only</span>
 
-  <h1>The free class has ended — <span class="hl">but this isn’t over for you.</span></h1>
-  <p class="lede">The <strong>AI Income Opportunities</strong> masterclass and its replay have now closed. Whether you watched every minute, caught a few bits, or life got busy and you missed it completely — you haven’t missed your chance. What the class was really about — how to create and sell your first digital product with AI, starting from absolute zero — is something you can now actually <em>do</em>, step by step, inside the program built for exactly that.</p>
+  <h1>You’re in. <span class="hl">AI Income Opportunities</span> — your private screening.</h1>
+  <p class="lede">Your personal link to <strong>Kotryna Bass’s</strong> free masterclass on making money online with digital products &amp; AI — how to create and sell your first one, starting from absolute zero. Watch all the way through: your special offer is revealed inside.</p>
 
   <div class="host">
     <div class="host-badge">KB</div>
     <div class="host-txt">
-      <b>Kotryna Bass</b>
+      <b>Hosted by Kotryna Bass</b>
       <span>Digital product creator &amp; passive income educator · selling online since 2012 · 10,000+ products sold · 2,000+ students taught</span>
     </div>
+  </div>
+
+  <div class="livebar">
+    <span class="pill urgent">⏳ Limited-time replay</span>
+    <span class="pill count">Access closes in <span class="num" id="countdown">24:00:00</span></span>
   </div>
 
   <div class="window">
     <div class="titlebar">
       <span class="lights"><i></i><i></i><i></i></span>
-      <span class="fname">ai-income-opportunities · replay-ended</span>
+      <span class="fname">ai-income-opportunities · private-replay</span>
     </div>
-    <div class="closed">
-      <div class="lock">🔒</div>
-      <b>This free training has closed</b>
-      <span>The replay is no longer available — but your next step is right below.</span>
+    <div class="screen" id="screen">
+      <div class="placeholder" id="placeholder">
+        <div class="playbtn" aria-hidden="true"></div>
+        <b>Your webinar video appears here</b>
+        <span>Paste your YouTube link in the script below and it drops straight into this window.</span>
+      </div>
     </div>
   </div>
 
-  <h2 class="whyhead">So — where to from here?</h2>
-  <p class="lede" style="margin-top:-6px;">No pressure and no rush. Whether that class lit something up in you — or you never got the chance to watch it — the next step is the same, and it’s completely your choice.</p>
-  <div class="why">
-    <div class="card">
-      <div class="n">1</div>
-      <h3>The whole system, not just the hype</h3>
-      <p>The class was the “what’s possible.” The Sprint is the “how” — it walks you through actually doing it, 21 days, one small Claude-powered step a day, from idea to a product that’s live and selling. (You don’t need to have watched to start.)</p>
-    </div>
-    <div class="card">
-      <div class="n">2</div>
-      <h3>Built for total beginners</h3>
-      <p>No audience, no tech skills, not a designer — none of it required. AI does the heavy lifting with you, so the part that used to make people quit simply isn’t in your way.</p>
-    </div>
-    <div class="card">
-      <div class="n">3</div>
-      <h3>You won’t stall out alone</h3>
-      <p>Every prompt, template and step is handed to you and guided day by day — so you actually finish, launch, and make your first sales instead of “someday.”</p>
-    </div>
-  </div>
+  <p class="undercap">▶ Press play now &amp; watch it through — this replay comes down soon and won’t be back.</p>
+  <p class="undercap" style="margin-top:4px;font-size:13px;">🤫 This link is just for you — please don’t share it around.</p>
+  <p class="undercap" style="margin-top:6px;"><a id="ytfallback" href="https://youtu.be/rgAnK7Fp9WY" target="_blank" rel="noopener" style="color:var(--ink);font-weight:700;">▶ Video not showing? Tap here to watch ↗</a></p>
 
   <div class="offer">
-    <div class="kick">If you’re ready</div>
-    <h2>Passive Income Magic — the AI Income Sprint</h2>
-    <p class="desc">21 days. One doable step a day, done with Claude and guided by me. By the end you’ll have created a real digital product, put it up for sale, and know exactly how to get it in front of buyers — even starting from zero. Have a look and see if it feels right for you.</p>
-    <a class="cta" href="https://pim.kotrynabass.com" target="_blank" rel="noopener">Take a look at the AI Income Sprint →</a>
-    <p class="pay">💳 <b>Prefer to spread the cost?</b> Flexible payment plans are available at checkout. Take your time — it’ll be here whenever you’re ready.</p>
+    <div class="kick">Ready to actually do this?</div>
+    <h2>Start your 21-day AI Income Sprint today</h2>
+    <a class="cta" href="https://pim.kotrynabass.com" target="_blank" rel="noopener">Get Passive Income Magic 4.0 →</a>
+    <p class="subline">Your webinar-only price: <span class="code">SPRINT97</span> for €97 (reg. €197)</p>
+    <p class="closes">⚠ This screening &amp; your discount come down soon — don’t wait on it.</p>
   </div>
 
   <footer>Kotryna Bass · <a href="https://kotrynabass.com" target="_blank" rel="noopener">kotrynabass.com</a></footer>
 </div>
+
+<script>
+  // ==== EDIT ME: paste your YouTube video ID or full link between the quotes ====
+  var YT_VIDEO = "https://youtu.be/rgAnK7Fp9WY";
+  // ============================================================================
+  function ytId(v){
+    if(!v) return "";
+    v = v.trim();
+    var m = v.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{6,})/);
+    if(m) return m[1];
+    if(/^[A-Za-z0-9_-]{6,}$/.test(v)) return v;
+    return "";
+  }
+  (function(){
+    var id = ytId(YT_VIDEO);
+    var fb = document.getElementById('ytfallback');
+    if(fb && id){ fb.href = "https://youtu.be/" + id; }
+    if(id){
+      var screen = document.getElementById('screen');
+      var url = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&modestbranding=1&playsinline=1";
+      screen.innerHTML = '<iframe src="' + url + '" title="AI Income Opportunities — private replay" '
+        + 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" '
+        + 'allowfullscreen></iframe>';
+    }
+  })();
+
+  // ---- urgency countdown: a real window per viewer, persists across refresh (evergreen-friendly) ----
+  (function(){
+    var el = document.getElementById('countdown');
+    if(!el) return;
+    var KEY = 'aio_deadline', WINDOW = 24*60*60*1000;   // 24 hours — change if you want
+    var deadline;
+    try{
+      deadline = parseInt(localStorage.getItem(KEY), 10);
+      if(!deadline || isNaN(deadline)){ deadline = Date.now() + WINDOW; localStorage.setItem(KEY, deadline); }
+    }catch(e){ deadline = Date.now() + WINDOW; }
+    function pad(n){ return (n<10?'0':'') + n; }
+    var t = setInterval(tick, 1000);
+    function tick(){
+      var diff = deadline - Date.now();
+      if(diff <= 0){
+        clearInterval(t);
+        var pill = el.closest ? el.closest('.pill') : el.parentNode;
+        if(pill){ pill.textContent = '⚠ Access is closing — watch now'; }
+        return;
+      }
+      var h = Math.floor(diff/3600000), m = Math.floor(diff%3600000/60000), s = Math.floor(diff%60000/1000);
+      el.textContent = pad(h)+':'+pad(m)+':'+pad(s);
+    }
+    tick();
+  })();
+</script>
 
 </body>
 </html>
