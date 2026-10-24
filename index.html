@@ -205,7 +205,8 @@
 
   <section class="closed" id="closed" hidden>
     <h2>This webinar has closed</h2>
-    <p>The free webinar and the SPRINT20 offer ended on 24 October at 13:00 Vilnius time. To hear about the next one, reply to my email or DM me on Instagram @kotrynabass.</p>
+    <p>The free webinar and the SPRINT20 offer ended on 24 October at 13:00 Vilnius time. You can still grab my free guide with 100+ digital product ideas.</p>
+    <p style="margin-top:20px"><a class="cta" id="guidebtn" href="#" target="_blank" rel="noopener" hidden>Get the free 100+ ideas guide →</a></p>
   </section>
 
   <footer>Kotryna Bass · <a href="https://kotrynabass.com" target="_blank" rel="noopener">kotrynabass.com</a></footer>
@@ -215,6 +216,10 @@
   // ---- real deadline: Sat 24 Oct 2026, 13:00 Vilnius (EEST, UTC+3) = 10:00 UTC ----
   (function(){
     var DEADLINE = Date.UTC(2026, 9, 24, 10, 0, 0);
+    // ==== EDIT ME: link to the free 100+ ideas guide ====
+    var GUIDE_URL = "";
+    var gb = document.getElementById('guidebtn');
+    if(gb && GUIDE_URL){ gb.href = GUIDE_URL; gb.hidden = false; }
     var live = document.getElementById('live'), closed = document.getElementById('closed');
     var d = document.getElementById('cd-d'), h = document.getElementById('cd-h'), m = document.getElementById('cd-m'), s = document.getElementById('cd-s');
     try{
